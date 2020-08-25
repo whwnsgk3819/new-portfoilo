@@ -29,12 +29,12 @@
     <div class="container">
       <div class="phone__number">+ 82 (0)10 - 8730 - 2698</div>
       <ul class="nav__menu">
-        <li class="nav__menu-item nav__menu-item--color">HOME</li>
-        <li class="nav__menu-item">ABOUT US</li>
-        <li class="nav__menu-item">PROJECTS</li>
-        <li class="nav__menu-item">BLOG</li>
-        <li class="nav__menu-item">CONTACTS</li>
+        <li id="listHome" class="nav__menu-item nav__menu-item--color">HOME</li>
+        <li id="listAbout" class="nav__menu-item">ABOUT</li>
+        <li id="listProjects" class="nav__menu-item">PROJECTS</li>
+        <li id="listContacts" class="nav__menu-item">CONTACTS</li>
       </ul>
+      <i class="xi-list nav__menu-button"></i>
     </div>
   </nav>
   <div class="slider-container">
@@ -44,28 +44,19 @@
     <div class="slider">
       <div class="slide slide-0 active">
         <div class="slide__bg"></div>
-        <div class="slide__content">
-
-
-        </div>
+        <div class="slide__content"></div>
       </div>
       <div class="slide slide-1">
         <div class="slide__bg"></div>
-        <div class="slide__content">
-
-        </div>
+        <div class="slide__content"></div>
       </div>
       <div class="slide slide-2">
         <div class="slide__bg"></div>
-        <div class="slide__content">
-
-        </div>
+        <div class="slide__content"></div>
       </div>
       <div class="slide slide-3">
         <div class="slide__bg"></div>
-        <div class="slide__content">
-
-        </div>
+        <div class="slide__content"></div>
       </div>
     </div>
   </div>
@@ -83,32 +74,51 @@
     <div class="logo__side-bar"></div>
     <ul class="logo__sns-menu">
       <li class="logo__sns-menu-list">
-        <i class="xi-instagram icon-sns"></i>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/cho_jun_ha/"
+          title="새 창으로 열립니다."
+        >
+          <i class="xi-instagram icon-sns"></i>
+        </a>
       </li>
       <li class="logo__sns-menu-list">
-        <i class="xi-facebook icon-sns"></i>
+        <a
+          target="_blank"
+          href="https://www.facebook.com/people/%EC%A1%B0%EC%A4%80%ED%95%98/100009644680526"
+          title="새 창으로 열립니다."
+        >
+          <i class="xi-facebook icon-sns"></i>
+        </a>
       </li>
       <li class="logo__sns-menu-list">
-        <i class="xi-kakaotalk icon-sns"></i>
+        <a
+          target="_blank"
+          href="https://open.kakao.com/o/s88dXpic"
+          title="새 창으로 열립니다."
+        >
+          <i class="xi-kakaotalk icon-sns"></i>
+        </a>
       </li>
     </ul>
   </div>
-
-  <nav class="nav__fixed">
-    <div class="logo__name-fixed">
-      C
-      <span class="logo__name-fixed--color">.</span>
-      JUNHA
-    </div>
-    <ul class="nav__menu-fixed">
-      <li class="nav__menu-item-fixed nav__menu-item-fixed--color">HOME</li>
-      <li class="nav__menu-item-fixed">ABOUT US</li>
-      <li class="nav__menu-item-fixed">PROJECTS</li>
-      <li class="nav__menu-item-fixed">BLOG</li>
-      <li class="nav__menu-item-fixed">CONTACTS</li>
-    </ul>
-  </nav>
 </header>
+<nav class="nav__fixed">
+  <div id="logoHome" class="logo__name-fixed">
+    C
+    <span class="logo__name-fixed--color">.</span>
+    JUNHA
+  </div>
+  <ul class="nav__menu-fixed">
+    <li id="fixedHome" class="nav__menu-item-fixed nav__menu-item-fixed--color">
+      HOME
+    </li>
+    <li id="fixedAbout" class="nav__menu-item-fixed">ABOUT</li>
+    <li id="fixedProjects" class="nav__menu-item-fixed">PROJECTS</li>
+    <li id="fixedContacts" class="nav__menu-item-fixed">CONTACTS</li>
+  </ul>
+  <i class="xi-list nav__menu-fixed-icon"></i>
+</nav>
 <section class="about">
   <div class="container">
     <h1 class="about__title">
@@ -128,12 +138,13 @@
           <br /><br />"세상에 필요한 것을 만드는 <br />개발자를 꿈꾸는
           조준하입니다." <br /><br />"꾸준한 공부와 뒷받침으로 <br />회사의
           성장을 함께 하겠습니다."
-
         </div>
       </div>
       <div class="about__wrap-skill about__wrap-box">
         <div class="about__wrap-skill-title">
-          show <br />one's ability<span class="about__wrap-skill-title--color">:</span>
+          show <br />one's ability<span class="about__wrap-skill-title--color"
+            >:</span
+          >
         </div>
         <div class="about__wrap-skill-menu">
           <div class="about__wrap-skill-list">
@@ -156,8 +167,10 @@
         </div>
       </div>
       <div class="about__wrap-skill about__wrap-box">
-        <div class="about__wrap-skill-title">
-          show <br />one's ability<span class="about__wrap-skill-title--color">:</span>
+        <div class="about__wrap-skill-title about__wrap-skill-title--none">
+          show <br />one's ability<span class="about__wrap-skill-title--color"
+            >:</span
+          >
         </div>
         <div class="about__wrap-skill-menu">
           <div class="about__wrap-skill-list">
@@ -181,14 +194,23 @@
     </div>
   </div>
   <h2 class="projects__title">
-    OUR <span class="projects__title--color">PROJECTS</span>
+    MY <span class="projects__title--color">PROJECTS</span>
   </h2>
 </section>
 <section class="projects">
   <div class="projects__imgbox">
     <div class="projects__slider">
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/music.png" alt="" />
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/music-island/"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/music.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">
@@ -196,23 +218,49 @@
           </div>
           <div class="projects__slider-textbox-kinds">RESPONSIVE</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/slack.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/slack/"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/slack.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">SLACK<br />COVER</div>
           <div class="projects__slider-textbox-kinds">RESPONSIVE</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/world.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/worldvision/"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/world.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">
@@ -220,56 +268,121 @@
           </div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/sinsegae.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/shinsegae/"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/shinsegae.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
-          <div class="projects__slider-textbox-title">SINSEGAE<br />COVER</div>
+          <div class="projects__slider-textbox-title">SHINSEGAE<br />COVER</div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/lotto.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/lotto/"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/lotto.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">LOTTO<br />COVER</div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/naver.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/naver-mobile/"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/naver.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">NAVER<br />COVER</div>
           <div class="projects__slider-textbox-kinds">MOBILE LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/kraft.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/krafts/"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/kraft.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">KRAFT<br />COVER</div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/music.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/music-island/"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/music.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">
@@ -277,23 +390,49 @@
           </div>
           <div class="projects__slider-textbox-kinds">RESPONSIVE</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/slack.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/slack/"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/slack.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">SLACK<br />COVER</div>
           <div class="projects__slider-textbox-kinds">RESPONSIVE</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/world.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/worldvision"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/world.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">
@@ -301,56 +440,121 @@
           </div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/sinsegae.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/shinsegae"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/shinsegae.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
-          <div class="projects__slider-textbox-title">SINSEGAE<br />COVER</div>
+          <div class="projects__slider-textbox-title">SHINSEGAE<br />COVER</div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/lotto.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/lotto"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/lotto.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">LOTTO<br />COVER</div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/naver.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/naver-mobile"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/naver.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">NAVER<br />COVER</div>
           <div class="projects__slider-textbox-kinds">MOBILE LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/kraft.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/krafts"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/kraft.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">KRAFT<br />COVER</div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/music.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/music-island"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/music.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">
@@ -358,23 +562,49 @@
           </div>
           <div class="projects__slider-textbox-kinds">RESPONSIVE</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/slack.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/slack"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/slack.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">SLACK<br />COVER</div>
           <div class="projects__slider-textbox-kinds">RESPONSIVE</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/world.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/worldvision"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/world.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">
@@ -382,54 +612,110 @@
           </div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/sinsegae.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/shinsegae"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/shinsegae.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
-          <div class="projects__slider-textbox-title">SINSEGAE<br />COVER</div>
+          <div class="projects__slider-textbox-title">SHINSEGAE<br />COVER</div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/lotto.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/lotto"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/lotto.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">LOTTO<br />COVER</div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/naver.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/naver-mobile"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/naver.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">NAVER<br />COVER</div>
           <div class="projects__slider-textbox-kinds">MOBILE LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
-      <div class="projects__slider-wrap">
-        <img class="projects__slider-image" src="./assets/image/kraft.png" alt="" />
+      </a>
+      <a
+        class="projects__slider-wrap"
+        target="_blank"
+        href="http://whwnsgk3819.dothome.co.kr/krafts"
+        title="새 창으로 열립니다."
+      >
+        <img
+          class="projects__slider-image"
+          src="./assets/image/kraft.png"
+          alt=""
+        />
         <div class="projects__slider-shadow"></div>
         <div class="projects__slider-textbox">
           <div class="projects__slider-textbox-title">KRAFT<br />COVER</div>
           <div class="projects__slider-textbox-kinds">PC LAYOUT</div>
           <div class="projects__slider_textbox-zoombox">
-            <img class="projects__slider_textbox-zoom" src="./assets/image/zoom.png" alt="" />
+            <img
+              class="projects__slider_textbox-zoom"
+              src="./assets/image/zoom.png"
+              alt=""
+            />
           </div>
         </div>
-      </div>
+      </a>
     </div>
     <div class="projects__button">
       <div class="icon-button icon-button--left">PREV</div>
@@ -448,22 +734,26 @@
         <div class="touch__wrap-introduction-text">
           Cho Jun Ha
           <br /><br />+ 82 (0)10 - 8730 - 2698
-          <br /><br />chojunha3819@gmail.com
-          <br /><br />
-          95, Suil-ro, Jangan-gu, Suwon-si,<br>Gyeonggi-do, Republic of Korea
+          <br /><br />chojunha3819@gmail.com <br /><br />
+          95, Suil-ro, Jangan-gu, Suwon-si,<br />Gyeonggi-do, Republic of Korea
         </div>
-        <div class="touch__name">
+        <div id="touchHome" class="touch__name">
           C
           <span class="touch__name--color">.</span>
           JUNHA
         </div>
       </div>
       <div class="touch__wrap-imgbox touch__wrap-box">
-        <img class="touch__wrap-img" src="./assets/image/character.png" alt="">
-        <div class="touch__wrap-content">Copyright 2020. Junha Cho. All Rights Reserved.</div>
+        <img
+          class="touch__wrap-img"
+          src="./assets/image/character.png"
+          alt=""
+        />
+        <div class="touch__wrap-content">
+          Copyright 2020. Junha Cho. All Rights Reserved.
+        </div>
       </div>
-      <div class="touch__wrap-imgbox about__wrap-box">
-      </div>
+      <div class="touch__wrap-imgbox about__wrap-box"></div>
     </div>
   </div>
 </section>
@@ -509,6 +799,26 @@
   </div>
 </div>
 <!--main container ends-->
+<div class="button">
+  <div class="button__wrap">
+    <div class="button__menu--title">
+      <div id="nameHome" class="button__name">
+        C
+        <span class="button__name--color">.</span>
+        JUNHA
+      </div>
+      <i class="xi-close button__menu-close"></i>
+    </div>
+    <div id="buttonHome" class="button__menu button__menu--back">HOME</div>
+    <div id="buttonAbout" class="button__menu button__menu--color">ABOUT</div>
+    <div id="buttonProjects" class="button__menu button__menu--color">
+      PROJECTS
+    </div>
+    <div id="buttonContacts" class="button__menu button__menu--color">
+      CONTACTS
+    </div>
+  </div>
+</div>
     <script src="./js/portfolio.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
